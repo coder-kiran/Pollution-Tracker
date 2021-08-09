@@ -1,7 +1,5 @@
-/* .latest-measurements-parent{
-    width: 520px;
-    height: 80vh;
-    background: green;
-    margin: 10px;
-
-} */
+.latest-measurement-parent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

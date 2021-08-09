@@ -1,5 +1,16 @@
 .header-parent{
     width: 100vw;
     height: 100vh;
-    background: rgb(208, 208, 253);
+    background: url('../assets/airpollution.jpg') no-repeat  center ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header-parent h1{
+    color: white;
+    font-size: 150px;
+}
+.header-parent h2{
+    color: white;
 }

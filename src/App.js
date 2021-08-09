@@ -21,6 +21,7 @@ function App() {
         cityAddress: list.name,
         country: list.country,
         measurements:list.measurements,
+        coordinates:list.coordinates,
 
         sources: list.sources.map((sourceObj) => ({
           id: sourceObj.id,
@@ -31,7 +32,7 @@ function App() {
         parameters: list.parameters.map((parameter) => ({
           id: parameter.id,
           unit: parameter.unit,
-          count: parameter.count,
+          lastValue: parameter.lastValue,
           average: parameter.average,
           displayName: parameter.displayName,
           lastUpdated: parameter.lastUpdated,

@@ -1,10 +1,9 @@
 .card {
   width: 400px;
   height: 80vh;
-  background: yellow;
   margin: 10px;
   border-radius: 10px;
-  border: 1px solid green;
+  border: 1px solid brown;
 }
 .card h2{
   text-align: center;

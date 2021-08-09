@@ -1,7 +1,7 @@
-/* .source-parent{
-    width: 250px;
-    height: 80vh;
-    background: yellow;
-    margin: 10px;
-
-} */
+.kiran h2 a{
+text-decoration: none;
+color: rgb(250, 83, 61);
+}
+.kiran h2 a:hover{
+    color: brown;
+}

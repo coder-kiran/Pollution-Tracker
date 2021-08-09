@@ -1,0 +1,6 @@
+.measurement-box{
+    margin: 20px;
+}
+.measurement-box :last-child{
+    font-size: xx-small;
+}
