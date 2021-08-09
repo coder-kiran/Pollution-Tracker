@@ -4,13 +4,13 @@ import LatestMeasurements from './LatestMeasurements';
 import Source from './Source';
 
 import classes from './PollutionDetails.module.css'
-function PollutionDetails() {
+function PollutionDetails(props) {
     return (
         <React.Fragment>
             <div className={classes['pollution-details-parent']}>
-            <Details/>
-            <LatestMeasurements/>
-            <Source/>
+            <Details mainObj={props.mainObj}/>
+            <LatestMeasurements mainObj={props.mainObj}/>
+            <Source mainObj={props.mainObj}/>
             </div>
         </React.Fragment>
     )
