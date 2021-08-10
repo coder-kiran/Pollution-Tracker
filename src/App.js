@@ -29,16 +29,25 @@ function App() {
           name: sourceObj.name,
         })),
 
-        parameters: list.parameters.map((parameter) => ({
-          id: parameter.id,
-          unit: parameter.unit,
-          lastValue: parameter.lastValue,
-          average: parameter.average,
-          displayName: parameter.displayName,
-          lastUpdated: parameter.lastUpdated,
-          firstUpdated: parameter.firstUpdated,
-          parameterId: parameter.parameterId,
-        })),
+        parameters: list.parameters.map((parameter) => {
+          var lastUpdatedDate=new Date(parameter.lastUpdated)
+          var firstUpdatedDate=new Date(parameter.firstUpdated)
+          return(
+            {
+              id: parameter.id,
+              unit: parameter.unit,
+              lastValue: parameter.lastValue,
+              average: parameter.average,
+              displayName: parameter.displayName,
+    
+              lastUpdated: lastUpdatedDate.toLocaleDateString(),
+              firstUpdated: firstUpdatedDate.toLocaleDateString(),
+              
+              parameterId: parameter.parameterId,
+            }
+          )
+         }),
+
       }))
   return (
       <React.Fragment>

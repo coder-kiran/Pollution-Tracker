@@ -1,7 +1,6 @@
 import React from "react";
 import classes from "./Header.module.css";
 
-import contextObject from "../store/pollution-list";
 function Header(props) {
   return (
     <React.Fragment>

@@ -1,6 +1,30 @@
-/* .details-parent{
-    width: 400px;
-    height: 80vh;
-    background: blue;
-    margin: 10px;
-} */
+.details-parent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.measurements {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.measurements h1{
+  font-size: 50px;
+letter-spacing: 5px;
+color: orange;
+}
+.measurements h5{
+  letter-spacing: 3px;
+}
+.coordinates {
+  width: 200px;
+  height: 200px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

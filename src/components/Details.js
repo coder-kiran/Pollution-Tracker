@@ -1,19 +1,26 @@
-import React from 'react'
-import classes from './Details.module.css'
-import Card from '../UI/Card'
+import React from "react";
+import classes from "./Details.module.css";
+import Card from "../UI/Card";
 function Details(props) {
-    return (
-        <Card className={classes['details-parent']}> 
+  return (
+    <Card >
         <h2>Details</h2>
-        <h1 >{props.mainObj.measurements}</h1>
-       <h3>Measurements</h3> 
-            <h3>Coordinates</h3>
-            <h1>N{props.mainObj.coordinates.latitude}</h1>     
-             <h1>E{props.mainObj.coordinates.longitude}</h1>   
-             <h3>Project Collection Dates</h3>
-             <p>will be added soon</p>
-        </Card>
-    )
+        <div className={classes['details-parent']}>
+
+        <div className={classes.measurements}>
+        <h1>{props.mainObj.measurements}</h1>
+      <h5>Measurements</h5>
+        </div>
+        <div className={classes.coordinates}>
+        <h6>Coordinates</h6>
+      <h5>N{props.mainObj.coordinates.latitude},E{props.mainObj.coordinates.longitude}</h5>
+        </div>
+      
+      
+        </div>
+     
+    </Card>
+  );
 }
 
 export default Details;

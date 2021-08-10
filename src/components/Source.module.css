@@ -1,7 +1,17 @@
-.kiran h2 a{
-text-decoration: none;
-color: rgb(250, 83, 61);
+.source-parent h3 a {
+  color: rgb(235, 234, 234);
+
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px;
+  margin-top: 120px;
+  border-radius: 10px;
+  background: orange;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
-.kiran h2 a:hover{
-    color: brown;
+.source-parent h3 a:hover {
+  color: #fff;
 }

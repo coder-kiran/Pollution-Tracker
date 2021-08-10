@@ -4,9 +4,9 @@ function MeasurementBox(props) {
     return (
         <div className={classes['measurement-box']}>
            <p>{props.params.displayName}</p>
-          <h1>{props.params.lastValue}</h1>          
+          <h1>{Math.round(props.params.lastValue)}</h1>          
           <p>{props.params.unit}</p>
-          <p>{props.params.lastUpdated}</p>         
+          <h6>{props.params.lastUpdated}</h6>         
         </div>
     )
 }

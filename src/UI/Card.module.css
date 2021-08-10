@@ -1,11 +1,12 @@
 .card {
   width: 400px;
-  height: 80vh;
+  min-height: 80vh;
   margin: 10px;
   border-radius: 10px;
-  border: 1px solid brown;
+  background: rgb(235, 234, 234);
 }
 .card h2{
   text-align: center;
   margin: 10px;
+  text-transform: uppercase;
 }
