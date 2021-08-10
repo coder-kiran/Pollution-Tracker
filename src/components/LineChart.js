@@ -18,7 +18,7 @@ const values=props.mainObj.parameters.map((x)=>{
   
 console.log('hi values',values.map(pp=>pp.lValue));
   const data = {
-    labels: ["SO3", "PM2.5", "So4", "so3", "ph", "gp"],
+    labels:values.map(pp=>pp.dName) ,
     datasets: [
       {
         label: "in µg/m³",
