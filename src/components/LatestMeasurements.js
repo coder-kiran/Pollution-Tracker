@@ -8,8 +8,14 @@ function LatestMeasurements(props) {
        <h2>Latest Measurements</h2>
       <div className={classes['latest-measurement-parent']}>     
       {props.mainObj.parameters.map((params) => (
-        <MeasurementBox params={params} key={params.id} />
+       
+<MeasurementBox params={params} key={params.id} />
+
+       
+        
+      
       ))}
+
       </div>
     </Card>
   );
