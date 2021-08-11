@@ -9,16 +9,18 @@ const LineChart = (props) => {
 const values=props.mainObj.parameters.map((x)=>{
   const chartObj={
     lValue:x.lastValue,
-      dName:x.displayName
+      dName:x.displayName,
+      dateFrom:x.firstUpdated,
+      dateTo:x.lastUpdated,
   }
   return chartObj;
    
   
 })
   
-console.log('hi values',values.map(pp=>pp.lValue));
+console.log('hi values',values.map(pp=>pp));
   const data = {
-    labels:values.map(pp=>pp.dName) ,
+    labels: values && values.map(pp=>pp.dName) ,
     datasets: [
       {
         label: "in µg/m³",
@@ -31,7 +33,9 @@ console.log('hi values',values.map(pp=>pp.lValue));
   };
   return (
     <div className={classes["chart-parent"]}>
-      <Line data={data} height={100} width={500} />
+     
+        <Line data={data} height={100} width={500} />
+      
     </div>
   );
 };

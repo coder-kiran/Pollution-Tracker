@@ -9,6 +9,7 @@ function HeadDetailsCombined(props) {
     <div>
       <Header mainObj={props.mainObj} />
       <PollutionDetails mainObj={props.mainObj} />
+      
       <LineChart mainObj={props.mainObj}/>
      
     </div>

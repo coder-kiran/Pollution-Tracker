@@ -1,7 +1,8 @@
 .pollution-details-parent{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     padding: 50px;
 }
