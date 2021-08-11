@@ -11,12 +11,12 @@
   align-items: center;
   justify-content: center;
 }
-.measurements h1{
+.measurements h1 {
   font-size: 50px;
-letter-spacing: 5px;
-color: orange;
+  letter-spacing: 5px;
+  color: orange;
 }
-.measurements h5{
+.measurements h5 {
   letter-spacing: 3px;
 }
 .coordinates {

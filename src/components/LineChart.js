@@ -2,42 +2,37 @@ import React from "react";
 import { Line } from "react-chartjs-2";
 import classes from "./LineChart.module.css";
 
-
-
 const LineChart = (props) => {
 
-const values=props.mainObj.parameters.map((x)=>{
-  const chartObj={
-    lValue:x.lastValue,
-      dName:x.displayName,
-      dateFrom:x.firstUpdated,
-      dateTo:x.lastUpdated,
-  }
-  return chartObj;
-   
+  const values = props.mainObj.parameters.map((param) => {
+    const chartObj = {
+      lValue: param.lastValue,
+      dName: param.displayName,
+      dateFrom: param.firstUpdated,
+      dateTo: param.lastUpdated,
+    };
+    return chartObj;
+  });
   
-})
-  
-console.log('hi values',values.map(pp=>pp));
   const data = {
-    labels: values && values.map(pp=>pp.dName) ,
+    labels: values && values.map((val) => val.dName),
     datasets: [
       {
         label: "in µg/m³",
-        data: values.map(pp=>pp.lValue),
+        data: values.map((val) => val.lValue),
         fill: false,
         backgroundColor: "orange",
         borderColor: "orange",
       },
     ],
-  };
+  }
+
   return (
     <div className={classes["chart-parent"]}>
-     
-        <Line data={data} height={100} width={500} />
-      
+      <Line data={data} height={100} width={500} />
     </div>
-  );
-};
+  )
+
+}
 
 export default LineChart;

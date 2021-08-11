@@ -1,19 +1,18 @@
-.measurement-box{
-    margin: 20px ;
-    padding: 7px;
-   min-width: 90px;
-   display: flex;
-   flex-direction: column;
-align-items: center;   
-    
+.measurement-box {
+  margin: 20px;
+  padding: 7px;
+  min-width: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.measurement-box h1{
-    color: orange;
+.measurement-box h1 {
+  color: orange;
 }
-.measurement-box :nth-child(3){
-    color: rgb(155, 105, 12);
+.measurement-box :nth-child(3) {
+  color: rgb(155, 105, 12);
 }
-.measurement-box h6{
-    margin-top: 10px;
+.measurement-box h6 {
+  margin-top: 10px;
 }

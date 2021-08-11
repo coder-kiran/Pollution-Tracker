@@ -6,8 +6,7 @@ function MeasurementBox(props) {
            <p>{props.params.displayName}</p>
           <h1>{Math.round(props.params.lastValue)}</h1>          
           <p>{props.params.unit}</p>
-          <h6>{props.params.lastUpdated}</h6>  
-                 
+          <h6>{props.params.lastUpdated}</h6>                   
         </div>
     )
 }

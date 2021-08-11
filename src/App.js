@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 
-import HeadDetailsCombined from './components/HeadDetailsCombined';
+import HeadDetailsCombined from "./components/HeadDetailsCombined";
 import axios from "axios";
-import contextObject from "./store/pollution-list";
 
 function App() {
+  
+  // declared a state to store the pollution data
   const [pollutionList, setPollutionList] = useState("");
+
   useEffect(() => {
     axios
       .get(
@@ -14,53 +16,44 @@ function App() {
       .then((response) => setPollutionList(response.data.results));
   }, []);
 
-  
-    
-   const filteredObject = pollutionList &&  pollutionList.map((list) => ({
-        city: list.city,
-        cityAddress: list.name,
-        country: list.country,
-        measurements:list.measurements,
-        coordinates:list.coordinates,
+  const filteredObject = pollutionList && pollutionList.map((list) => ({
+      city: list.city,
+      cityAddress: list.name,
+      country: list.country,
+      measurements: list.measurements,
+      coordinates: list.coordinates,
 
-        sources: list.sources.map((sourceObj) => ({
-          id: sourceObj.id,
-          url: sourceObj.url,
-          name: sourceObj.name,
-        })),
+      sources: list.sources.map((sourceObj) => ({
+        id: sourceObj.id,
+        url: sourceObj.url,
+        name: sourceObj.name,
+      })),
 
-        parameters: list.parameters.map((parameter) => {
-          var lastUpdatedDate=new Date(parameter.lastUpdated)
-          var firstUpdatedDate=new Date(parameter.firstUpdated)
-          return(
-            {
-              id: parameter.id,
-              unit: parameter.unit,
-              lastValue: parameter.lastValue,
-              average: parameter.average,
-              displayName: parameter.displayName,
-    
-              lastUpdated: lastUpdatedDate.toLocaleDateString(),
-              firstUpdated: firstUpdatedDate.toLocaleDateString(),
-              
-              parameterId: parameter.parameterId,
-            }
-          )
-         }),
+      parameters: list.parameters.map((parameter) => {
+        var lastUpdatedDate = new Date(parameter.lastUpdated);
+        var firstUpdatedDate = new Date(parameter.firstUpdated);
+        return {
+          id: parameter.id,
+          unit: parameter.unit,
+          lastValue: parameter.lastValue,
+          average: parameter.average,
+          displayName: parameter.displayName,
 
-      }))
+          lastUpdated: lastUpdatedDate.toLocaleDateString(),
+          firstUpdated: firstUpdatedDate.toLocaleDateString(),
+
+          parameterId: parameter.parameterId,
+        };
+      }),
+    }));
+
   return (
-      <React.Fragment>
-        {
-          console.log(filteredObject)
-        }
-        
-        {
-          filteredObject && filteredObject.map((mainObj)=>  <HeadDetailsCombined mainObj={mainObj}/> )
-        }
-       
-      </React.Fragment>
-                     
+    <React.Fragment>
+      {filteredObject &&
+        filteredObject.map((mainObj) => (
+          <HeadDetailsCombined mainObj={mainObj} />
+        ))}
+    </React.Fragment>
   );
 }
 
