@@ -4,7 +4,6 @@
   align-items: center;
 }
 .measurements {
-  width: 200px;
   height: 200px;
   display: flex;
   flex-direction: column;

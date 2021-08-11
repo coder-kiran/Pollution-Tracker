@@ -3,3 +3,10 @@
   flex-wrap: wrap;
   margin-top: 40px;
 }
+
+@media (max-width: 600px) {  
+  .latest-measurement-parent {
+  justify-content: center;
+  }
+}
+

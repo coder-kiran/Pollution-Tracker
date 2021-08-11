@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import HeadDetailsCombined from "./components/HeadDetailsCombined";
 import axios from "axios";
+import Footer from "./components/Footer";
 
 function App() {
   
@@ -53,6 +54,7 @@ function App() {
         filteredObject.map((mainObj) => (
           <HeadDetailsCombined mainObj={mainObj} />
         ))}
+        <Footer/>
     </React.Fragment>
   );
 }

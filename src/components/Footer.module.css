@@ -1,0 +1,33 @@
+.footerParent {
+   
+    background: orange;
+    color: rgb(146, 119, 89);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footerParent p{
+    text-align: center;
+    font-size: 14px;
+    margin-top: 40px;
+    color: #fff;
+}
+.socialmedia{
+    display: flex;
+    justify-content: center;
+    margin: 8px;
+}
+.socialmedia {
+    width: 150px;
+    display: flex;
+ justify-content: space-around;
+}
+.socialmedia a{
+ text-decoration: none;
+ color: wheat;
+ font-size: 24px;
+}
+.socialmedia a:hover{
+    color: rgb(122, 80, 1);
+}

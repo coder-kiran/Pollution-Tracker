@@ -17,7 +17,6 @@
 
 @media (max-width: 600px) {
   .header-parent h1 {
-    color: red;
     font-size: 56px;
   }
   .header-parent h2 {
